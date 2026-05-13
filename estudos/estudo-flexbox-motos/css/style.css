@@ -1,0 +1,99 @@
+/* Importação das fontes do projeto */
+@font-face {
+    font-family: Quicksand-Light;
+    src: url(../fonts/Quicksand-Light.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-light: #f4f4f4;
+    --color-dark: #222222;
+    --color-orange: #ff6600;
+    --spacing-sm: 10px;
+    --spacing-md: 30px;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Quicksand-Light;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    color: var(--color-light);
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover{
+        color: var(--color-orange);
+    }
+}
+
+.hero{
+    height: 100dvh;
+    /* ../ "sai" da pasta atual e permite acessar outras */
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .4)),
+    url(../images/motos/banner.jpg);
+    
+    background-repeat: no-repeat;
+    
+    /* as imagens de fundo tendem a se multiplicar, o comando abaixo impede isso, faz com que ela cubra toda tela */
+    background-size: cover;
+    
+    /* pega o ponto central da imagem e coloca no centro da tela, pode */
+    background-position: 50%;
+
+    /* scrolla a tela e deixa a imagem para trás */
+    background-attachment: fixed;
+}
+    
+.header-hero{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--spacing-md);
+}
+
+.nav-hero-menu{
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+h1{
+    color: var(--color-light);
+}
+
+.cta{
+    min-height: calc(100dvh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    color: var(--color-light);
+    text-align: center;
+}
+
+.cta h2{
+    font-size: 7vmin;
+    text-wrap: balance;
+}
+
+.cta p{
+    width: 60%;
+    text-wrap: balance;
+    line-height: 1.6;
+}
+
+section{
+    height: 100dvh;
+}

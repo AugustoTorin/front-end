@@ -1,0 +1,69 @@
+:root{
+    --spacing-5: 5px;
+    --spacing-10: 10px;
+    --spacing-20: 20px;
+    --spacing-30: 30px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Nunito Sans", sans-serif;
+}
+
+main{
+    width: 100%;
+    max-width: 2400px;
+
+    /* centraliza horizontalmente elementos com largura definida */
+    margin: 0 auto;
+    padding: var(--spacing-20);
+}
+
+.informacoes h1{
+    margin-bottom: var(--spacing-10);
+}
+
+.informacoes h2{
+    margin-top: var(--spacing-30);
+    margin-bottom: var(--spacing-10);
+}
+
+.informacoes p{
+    margin-bottom: var(--spacing-5);
+}
+
+.informacoes li{
+    margin-bottom: var(--spacing-5);
+}
+
+.informacoes ul{
+    padding-left: var(--spacing-20);
+}
+
+.galeria h2{
+    margin-top: var(--spacing-30);
+}
+
+.galeria-container{
+    /* organiza elementos horizontalmente/verticalmente */
+    display: flex;
+
+    /* distribui espaço entre elementos do flex */
+    justify-content: space-between;
+
+    /* espaçamento entre elementos flex/grid */
+    gap: 20px;
+    margin-top: var(--spacing-20);
+}
+
+.galeria-container img{
+    width: 100%;
+    max-width: 600px;
+    border-radius: 5%;
+    border: 3px solid black;
+}
