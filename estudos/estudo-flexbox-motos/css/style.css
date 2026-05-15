@@ -14,6 +14,7 @@
     --color-light: #f4f4f4;
     --color-dark: #222222;
     --color-orange: #ff6600;
+    --color-orange-100: rgba(255, 102, 0, 0.4);
     --spacing-sm: 10px;
     --spacing-md: 30px;
 }
@@ -94,6 +95,50 @@ h1{
     line-height: 1.6;
 }
 
+.btn{
+    border: 2px solid var(--color-orange);
+    background-color: var(--color-orange-100);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 100px;
+    transition: .5s;
+
+    &:hover{
+        background-color: transparent;
+    }
+}
+
+.galeria{
+    padding: var(--spacing-md);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+
+    h2{
+        margin-bottom: var(--spacing-md);
+        font-size: 6vmin;
+    }
+
+    .grid-motos{
+        columns: 3 300px;
+
+        img{
+            width: 100%;
+            margin-block: var(--spacing-sm);
+            border-radius: 8px;
+            opacity: .5;
+            filter: grayscale(1);
+            transition: .5s;
+            position: relative;
+
+            &:hover{
+                opacity: 1;
+                filter: grayscale(0);
+                scale: 1.15;
+                z-index: 1;
+            }
+        }
+    }
+}
+
 section{
-    height: 100dvh;
+    min-height: 100dvh;
 }
