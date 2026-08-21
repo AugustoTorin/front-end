@@ -120,7 +120,7 @@ img {
     animation-play-state: paused;
 }
 
-@keyframes slide {
+@keyframes slide{
     from{
         transform: translateX(0);
     }
@@ -133,12 +133,107 @@ img {
 
 /*************   grid-02   *************/
 
+/* auto-fit - ele irá fazer com que o elemento ocupe todo o espaço da linha
+auto-fill - ele não estica os elemetos */
+
+.grid-02{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.box-2{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    border: 1px solid var(--color-light);
+    align-items: center;
+    padding-bottom: var(--spacing-sm);
+    border-radius: var(--radius-md);
+}
+
+.box-2 img{
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+}
+
+.box-2 a{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
 /************* fim grid-02 *************/
 
 /*************   grid-03   *************/
 
+.grid-03{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+
+    /* define o tamanho das linhas que são geradas automaticamente pelo grid */
+    grid-auto-rows: 300px;
+}
+
+.box-03{
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.box-03 img{
+    height: 100%;
+    object-fit: cover;
+}
+
+/* cuidado com span no responsivo, quando você usar lembre-se de arrumar dentro da media */
+
+.row-2{
+    grid-row: span 2;
+}
+
+.col-2{
+    grid-column: span 2;
+}
+
 /************* fim grid-03 *************/
 
 /*************   responsivo   *************/
+
+@media( width <= 1024px){
+    .hero h1{
+        width: 80%;
+    }
+
+    .grid-01 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    .box-1:last-child{
+        grid-column: span 2;
+    }
+    
+    .grid-03{
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+    .row-2 {
+        grid-row: span 1;
+    }
+    
+    .col-2 {
+        grid-column: span 1;
+    }
+}
+
+@media(width <= 680px){
+    .grid-01{
+        grid-template-columns: 1fr;
+    }
+
+    .box-1:last-child{
+        grid-column: span 1;
+    }
+}
 
 /************* fim responsivo *************/
