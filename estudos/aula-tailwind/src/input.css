@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme{
+    --color-blaze-orange-50: #fff8ec;
+    --color-blaze-orange-100: #ffefd3;
+    --color-blaze-orange-200: #ffdaa5;
+    --color-blaze-orange-300: #ffc06d;
+    --color-blaze-orange-400: #ff9a32;
+    --color-blaze-orange-500: #ff7d0a;
+    --color-blaze-orange-600: #ff6600;
+    --color-blaze-orange-700: #cc4802;
+    --color-blaze-orange-800: #a1390b;
+    --color-blaze-orange-900: #82310c;
+    --color-blaze-orange-950: #461604;
+}
